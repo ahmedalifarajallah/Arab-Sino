@@ -187,6 +187,7 @@ body {
   width: 90%;
   z-index: 1;
   opacity: 12%;
+  overflow-x: hidden;
 }
 @media (max-width: 1999px) {
   .background-logo {
@@ -668,7 +669,7 @@ body {
 }
 @media (max-width:576px) {
   .news img  {
-    height: 50%;
+    height: 10%;
   }
 }
 
@@ -789,7 +790,7 @@ body {
 }
 @media (max-width:576px) {
   .community img  {
-    height: 50%;
+    height: auto;
   }
 }
 /* End Community */
