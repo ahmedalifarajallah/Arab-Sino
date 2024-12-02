@@ -88,21 +88,13 @@ body {
   overflow-y: hidden;
 }
 
-.navbar .navbar-brand {
+.navbar .navbar-logo img {
   width: 278px;
-}
-.navbar .navbar-brand img {
-  width: 100%;
-  height: 100%;
-}
-
-.navbar .navbar-text {
-  width: 174px;
-  margin-left: auto;
+  height: 71px;
 }
 .navbar .navbar-text img {
-  width: 100%;
-  height: 100%;
+  width: 174px;
+  height: 85px;
 }
 
 .nav .navbar-nav .nav-link {
@@ -133,9 +125,17 @@ body {
   background-color: var(--primary-hover-color);
 }
 
+@media (max-width: 1199px) {
+  .navbar .nav {
+    justify-content: end !important;
+  }
+}
 @media (max-width: 1999px) {
   .nav .navbar-nav .nav-link {
     padding: 7px;
+  }
+  .navbar .nav {
+    justify-content: end;
   }
 }
 @media (max-width: 991px) {
@@ -177,6 +177,33 @@ body {
   left: 0;
   background-color: var(--dark-color);
   opacity: 35%;
+}
+
+.background-logo {
+  position: absolute;
+  top: -30vh;
+  right: -69vw;
+  width: 90%;
+  z-index: 1;
+  opacity: 12%;
+}
+@media (max-width: 1999px) {
+  .background-logo {
+    top: -9vh;
+    right: -68vw;
+  }
+}
+@media (max-width: 992px) {
+  .background-logo {
+    top: 2vh;
+    right: -68vw;
+  }
+}
+@media (max-width: 768px) {
+  .background-logo {
+    top: 8vh;
+    right: -67vw;
+  }
 }
 
 .landing .land-left {
@@ -384,6 +411,11 @@ body {
   line-height: 29.4px;
   letter-spacing: -0.04em;
   text-align: left;
+}
+@media (max-width: 991px) {
+  .future .row {
+    flex-direction: column;
+  }
 }
 /* End Future */
 
@@ -756,6 +788,10 @@ body {
   background-color: var(--dark-text-color);
 }
 
+.footer .footer-img img {
+  max-width: 75%;
+}
+
 .footer h4 {
   font-size: 16px;
   font-weight: 500;
@@ -806,12 +842,26 @@ body {
   text-decoration: underline;
 }
 
-/* ###################### */
+/* Mob Menu */
 .products-menu {
+  display: none;
+  opacity: 0;
   width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
+  top: 0;
+  left: -100vw;
+  background-color: var(--body-background-color);
   overflow-x: hidden;
+  z-index: 99;
+  transition: left 0.4s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+.products-menu.open {
+  display: block;
+  left: 0;
+  opacity: 1;
+  transition: left 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
 .products-menu .left-menu-links {
@@ -869,6 +919,7 @@ body {
 
 .products-menu .centered-products {
   width: 50%;
+  padding-left: 10px;
 }
 
 .products-menu .centered-products .centered-menu-links a {
@@ -884,11 +935,12 @@ body {
 
 .products-menu .right-menu-links {
   position: absolute;
-  right: 15px;
+  right: 0px;
   top: 0;
   width: 25%;
   height: 100%;
   background-color: #e621290a;
+  padding-right: 10px;
 }
 
 .products-menu .right-menu-links .right-menu-link {
@@ -926,7 +978,7 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 388px) and (max-width: 567px) {
+@media (min-width: 388px) and (max-width: 667px) {
   .products-menu .left-menu-links {
     width: 40%;
   }
@@ -962,28 +1014,46 @@ body {
     width: 18px !important;
   }
 }
-@media (min-width: 568px) and (max-width: 991px) {
-  .container {
-    margin: 0 25px;
+@media (min-width: 668px) and (max-width: 991px) {
+  .products-menu .container {
+    margin: 0 25% 0 8px;
+    padding: 0;
   }
 
   .products-menu .left-menu-links {
-    width: 40%;
+    width: 35%;
   }
-
+  .products-menu .centered-products {
+    width: 60%;
+  }
+  .products-menu .centered-menu-links {
+    width: calc(100% / 2);
+  }
   .products-menu .left-menu-links li img {
     max-width: 50px;
-  }
-  .products-menu .centered-products .row {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
   }
   .products-menu .left-menu-links li p {
     font-size: 12px;
     padding: 0 !important;
     padding-right: 4px !important;
     padding-left: 4px !important;
+  }
+  .products-menu .centered-products .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    flex-direction: row !important;
+    padding-left: 20px;
+  }
+  .products-menu .centered-menu-links {
+    max-width: 160px;
+    max-height: 145px;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 991px) {
+  .products-menu .centered-products .row {
+    justify-content: center;
   }
 }
