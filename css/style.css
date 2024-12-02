@@ -86,6 +86,7 @@ body {
   height: 95px;
   color: var(--dark-text-color);
   overflow-y: hidden;
+  margin-bottom: 20px;
 }
 
 .navbar .navbar-logo img {
@@ -94,7 +95,6 @@ body {
 }
 .navbar .navbar-text img {
   width: 174px;
-  height: 85px;
 }
 
 .nav .navbar-nav .nav-link {
@@ -140,6 +140,9 @@ body {
   }
 }
 @media (max-width: 991px) {
+  .navbar {
+    margin-bottom: 0px;
+  }
   .navbar .nav,
   .navbar .navbar-text {
     display: none;
@@ -168,6 +171,7 @@ body {
   background-size: cover;
   background-position: center;
   position: relative;
+  overflow-x: hidden;
 }
 .landing::before {
   content: "";
@@ -183,28 +187,40 @@ body {
 .background-logo {
   position: absolute;
   top: -30vh;
-  right: -69vw;
-  width: 90%;
+  right: -71vw;
   z-index: 1;
   opacity: 12%;
   overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
+  background-image: url("../images/Sany-Logo.wine 5.png");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-@media (max-width: 1999px) {
+@media (min-width: 1200px) {
   .background-logo {
-    top: -9vh;
-    right: -68vw;
+    right: -75vw;
   }
 }
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
   .background-logo {
-    top: 2vh;
-    right: -68vw;
+    right: -75vw;
+  }
+}
+@media (max-width: 991px) {
+  .background-logo {
+    right: -65vw;
   }
 }
 @media (max-width: 768px) {
   .background-logo {
-    top: 8vh;
-    right: -67vw;
+    right: -55vw;
+  }
+}
+@media (max-width: 576px) {
+  .background-logo {
+    right: -25vw;
   }
 }
 
@@ -252,6 +268,7 @@ body {
   line-height: 21.7px;
   letter-spacing: 0.02em;
   text-align: left;
+  color: var(--body-background-color);
 }
 
 .landing .land-right {
@@ -668,8 +685,8 @@ body {
   height: 100%;
   object-fit: cover;
 }
-@media (max-width:576px) {
-  .news img  {
+@media (max-width: 576px) {
+  .news img {
     /* height: auto; */
   }
 }
@@ -789,8 +806,8 @@ body {
 .community img {
   object-fit: cover;
 }
-@media (max-width:576px) {
-  .community img  {
+@media (max-width: 576px) {
+  .community img {
     /* height: 50%; */
   }
 }
