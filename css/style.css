@@ -642,6 +642,7 @@ body {
   position: relative;
   padding-bottom: 60px;
   overflow-x: hidden;
+  max-height: 100vh;
 }
 .news::before {
   content: "";
@@ -669,7 +670,7 @@ body {
 }
 @media (max-width:576px) {
   .news img  {
-    height: 10%;
+    /* height: auto; */
   }
 }
 
@@ -790,7 +791,7 @@ body {
 }
 @media (max-width:576px) {
   .community img  {
-    height: auto;
+    /* height: 50%; */
   }
 }
 /* End Community */
