@@ -659,7 +659,6 @@ body {
   position: relative;
   padding-bottom: 60px;
   overflow-x: hidden;
-  max-height: 100vh;
 }
 .news::before {
   content: "";
@@ -684,11 +683,6 @@ body {
   -o-border-radius: 20px;
   height: 100%;
   object-fit: cover;
-}
-@media (max-width: 576px) {
-  .news img {
-    /* height: auto; */
-  }
 }
 
 .news .news-full-card .badge {
@@ -805,11 +799,6 @@ body {
 /* Start Community */
 .community img {
   object-fit: cover;
-}
-@media (max-width: 576px) {
-  .community img {
-    /* height: 50%; */
-  }
 }
 /* End Community */
 
