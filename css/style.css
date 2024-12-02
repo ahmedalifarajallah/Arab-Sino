@@ -110,6 +110,7 @@ body {
 
 .navbar .custom-navbar-toggler {
   display: none;
+  z-index: 199;
 }
 
 .navbar .custom-navbar-toggler span {
@@ -665,6 +666,11 @@ body {
   height: 100%;
   object-fit: cover;
 }
+@media (max-width:576px) {
+  .news img  {
+    height: 50%;
+  }
+}
 
 .news .news-full-card .badge {
   background-color: var(--primary-color);
@@ -781,6 +787,11 @@ body {
 .community img {
   object-fit: cover;
 }
+@media (max-width:576px) {
+  .community img  {
+    height: 50%;
+  }
+}
 /* End Community */
 
 /* Start Footer */
@@ -853,7 +864,7 @@ body {
   left: -100vw;
   background-color: var(--body-background-color);
   overflow-x: hidden;
-  z-index: 99;
+  z-index: 999;
   transition: left 0.4s ease-in-out, opacity 0.4s ease-in-out;
 }
 
@@ -978,27 +989,12 @@ body {
   cursor: pointer;
 }
 
-@media (min-width: 388px) and (max-width: 667px) {
+@media (max-width: 667px) {
   .products-menu .left-menu-links {
-    width: 40%;
-  }
-  .products-menu .left-menu-links li img {
-    max-width: 50px;
-  }
-  .products-menu .left-menu-links li p {
-    font-size: 12px;
-    padding: 0 !important;
-    padding-right: 4px !important;
-    padding-left: 4px !important;
-  }
-  .products-menu .centered-products .row {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: start;
+    display: none;
   }
   .products-menu .right-menu-links {
-    width: 28%;
+    width: 45%;
   }
   .products-menu .right-menu-links .right-menu-link a {
     font-size: 12px;
