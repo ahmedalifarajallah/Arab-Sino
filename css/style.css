@@ -769,6 +769,7 @@ body {
   position: absolute;
   height: 150px;
   width: 450px;
+  z-index: -1;
 }
 .news .dotted-icon.top-icon {
   top: 65px;
@@ -793,12 +794,21 @@ body {
   .news .news-right-card .right-card-txt p {
     font-size: 14px;
   }
+  .news img {
+    height: 225px;
+  }
 }
 /* End News */
 
 /* Start Community */
 .community img {
   object-fit: cover;
+}
+@media (max-width: 576px) {
+  .community img {
+    height: 225px !important;
+    width: 100% !important;
+  }
 }
 /* End Community */
 
